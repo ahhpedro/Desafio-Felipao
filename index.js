@@ -20,23 +20,32 @@
 console.log("Digite o nome do seu jogador")
 
 let nickname = "Itadori"
-let NivelDoPersonagem = "XP1001"
+let xpHeroi = 9000;
+
 console.log("Bem vindo " + nickname)
-const notificacao = "Subiu para: "
-//console.log(notificacao + "")
-let XP1000 = "FERRO"
-let XP1001 = "BRONZE"
-let XP2001 = "PRATA"
-let XP5001 = "OURO"
-let XP7001 = "PLATINA"
-let XP8001 = "ASCENDENTE"
-let XP9001 = "IMORTAL"
-let XP10001 = "RADIANTE"
-if(XP1000){console.log(notificacao + XP1000)}
-if(XP1001){console.log(notificacao + XP1001)} if(NivelDoPersonagem ===XP2001){ }else if(NivelDoPersonagem <= XP5001){console.log("contiune lutando") }else{ }(NivelDoPersonagem === XP7001)
-if(XP2001){console.log(notificacao + XP2001 )}
-if(XP5001){console.log(notificacao + XP5001)}
-if(XP7001){console.log(notificacao + XP7001 )}
-if(XP8001){console.log(notificacao + XP8001 )}
-if(XP9001){console.log(notificacao + XP9001 )}
-if(XP10001){console.log(notificacao + XP10001)}
+
+if (xpHeroi < 1000) {
+    nivelHeroi = "Ferro";
+    
+} else if (xpHeroi >= 1001 && xpHeroi <= 2000) {
+    nivelHeroi = "Bronze";
+
+} else if (xpHeroi >= 2001 && xpHeroi <= 5000) {
+    nivelHeroi = "Prata";
+    
+} else if (xpHeroi >= 6001 && xpHeroi <= 7000) {
+    nivelHeroi = "Ouro";
+
+} else if (xpHeroi >= 7001 && xpHeroi <= 8000) {
+    nivelHeroi = "Platina";
+
+} else if (xpHeroi >= 8001 && xpHeroi <= 9000) {
+    nivelHeroi = "Ascendente";
+
+} else if (xpHeroi >= 9001 && xpHeroi <= 10000) {
+    nivelHeroi = "Imortal";
+
+} else {
+    nivelHeroi = "Radiante";
+}
+console.log(`O Herói ${nickname} está no nível ${nivelHeroi}.`);
