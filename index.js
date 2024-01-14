@@ -1,51 +1,23 @@
-//Instruções para entrega
-//desafio classificador de nivel heroi
-//o que deve ser utilizdo
-//variaveis
-//operadores
-//laços de repetição
-//estruturas de decisões
-//objetivoCrie uma variável para armazenar o nome e a quantidade de experiência (XP) de um herói, depois utilize uma estrutura de decisão para apresentar alguma das mensagens abaixo:
-//Se XP for menor do que 1.000 = Ferro
-//Se XP for entre 1.001 e 2.000 = Bronze
-//Se XP for entre 2.001 e 5.000 = Prata
-//Se XP for entre 5.001 e 7.000 = Ouro
-//Se XP for entre 7.001 e 8.000 = Platina
-//Se XP for entre 8.001 e 9.000 = Ascendente
-//Se XP for entre 9.001 e 10.000= Imortal
-//Se XP for maior ou igual a 10.001 = Radiante
-//## Saída
-//Ao final deve se exibir uma mensagem:
-//O Herói de nome **{nome}** está no nível de **{nivel}**"
-console.log("Digite o nome do seu jogador")
+function calculadoraDePartidas(nomeHeroi, vitorias, derrotas) {
+var saldoVitorias = vitorias - derrotas;
+var nivel;
+    if (saldoVitorias < 10) {
+        nivel = "Ferro";
+    } else if (saldoVitorias <= 20) {
+        nivel = "Bronze";
+    } else if (saldoVitorias <= 50) {
+        nivel = "Prata";
+    } else if (saldoVitorias <= 80) {
+        nivel = "Ouro";
+    } else if (saldoVitorias <= 90) {
+        nivel = "Diamante";
+    } else if (saldoVitorias <= 100) {
+        nivel = "Lendário";
+    } else {
+        nivel = "Imortal";
+    }
 
-let nickname = "Itadori"
-let xpHeroi = 9000;
-
-console.log("Bem vindo " + nickname)
-
-if (xpHeroi < 1000) {
-    nivelHeroi = "Ferro";
-    
-} else if (xpHeroi >= 1001 && xpHeroi <= 2000) {
-    nivelHeroi = "Bronze";
-
-} else if (xpHeroi >= 2001 && xpHeroi <= 5000) {
-    nivelHeroi = "Prata";
-    
-} else if (xpHeroi >= 6001 && xpHeroi <= 7000) {
-    nivelHeroi = "Ouro";
-
-} else if (xpHeroi >= 7001 && xpHeroi <= 8000) {
-    nivelHeroi = "Platina";
-
-} else if (xpHeroi >= 8001 && xpHeroi <= 9000) {
-    nivelHeroi = "Ascendente";
-
-} else if (xpHeroi >= 9001 && xpHeroi <= 10000) {
-    nivelHeroi = "Imortal";
-
-} else {
-    nivelHeroi = "Radiante";
+    return "O Herói " + nomeHeroi + " tem de saldo de " + saldoVitorias + " e está no nível " + nivel;
 }
-console.log(`O Herói ${nickname} está no nível ${nivelHeroi}.`);
+
+console.log(calculadoraDePartidas("Pedro", 120, 10)); 
